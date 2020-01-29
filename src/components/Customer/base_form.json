@@ -1,482 +1,629 @@
 {
-    "config": [
-      {
-        "type": "text",
-        "label": "Home Address",
-        "name": "home_add1",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "123123",
-        "order": 1,
-        "helperText": "Please enter data",
-        "accessLevel": 3,
-        "minRole": "admin",
-        "category": {
-            "type": "contacts",
-            "label": "Contact",
-            "id": "89101-conaslk-asdf-fda111",
-            "order": 2
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "PO Box / Suite",
-        "name": "home_add2",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "43234243",
-        "order": 2,
-        "helperText": "Please enter data",
-        "accessLevel": 3,
-        "minRole": "admin",
-        "category": {
-            "type": "contacts",
-            "label": "Contact",
-            "id": "89101-conaslk-asdf-fda111",
-            "order": 2
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "City",
-        "name": "home_add3",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "3252342",
-        "order": 3,
-        "helperText": "Please enter data",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-            "type": "contacts",
-            "label": "Contact",
-            "id": "89101-conaslk-asdf-fda111",
-            "order": 2
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "Postal code",
-        "name": "home_add4",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "13414134",
-        "order": 4,
-        "helperText": "Please enter data",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-            "type": "contacts",
-            "label": "Contact",
-            "id": "89101-conaslk-asdf-fda111",
-            "order": 2
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "Country",
-        "name": "home_add5",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "2452452",
-        "order": 5,
-        "helperText": "Please enter data",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-            "type": "contacts",
-            "label": "Contact",
-            "id": "89101-conaslk-asdf-fda111",
-            "order": 2
-        },
-        "options": []
-      },
+"config": [
+  {
+    "type": "text",
+    "label": "Home Address",
+    "name": "home_add1",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "123123",
+    "order": 1,
+    "helperText": "Please enter data",
+    "minRole": "admin",
+    "category": {
+        "type": "contacts",
+        "label": "Contact",
+        "id": "89101-conaslk-asdf-fda111",
+        "order": 2
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Home Address",
+    "name": "home_add2",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "43234243",
+    "order": 2,
+    "helperText": "Please enter data",
+    "accessLevel": 3,
+    "minRole": "admin",
+    "category": {
+        "type": "contacts",
+        "label": "Contact",
+        "id": "89101-conaslk-asdf-fda111",
+        "order": 2
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Home Address",
+    "name": "home_add3",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "3252342",
+    "order": 3,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "contacts",
+        "label": "Contact",
+        "id": "89101-conaslk-asdf-fda111",
+        "order": 2
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "City",
+    "name": "home_add4",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "13414134",
+    "order": 4,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "contacts",
+        "label": "Contact",
+        "id": "89101-conaslk-asdf-fda111",
+        "order": 2
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Country",
+    "name": "home_add5",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "2452452",
+    "order": 5,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "contacts",
+        "label": "Contact",
+        "id": "89101-conaslk-asdf-fda111",
+        "order": 2
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Zip Code",
+    "name": "home_zip_code",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "2452452",
+    "order": 5,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "contacts",
+        "label": "Contact",
+        "id": "89101-conaslk-asdf-fda111",
+        "order": 2
+    },
+    "options": []
+  },
+
+
+
+  {
+    "type": "text",
+    "label": "Address",
+    "name": "mail_add1",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "123123",
+    "order": 1,
+    "helperText": "Please enter data",
+    "accessLevel": 3,
+    "minRole": "admin",
+    "category": {
+        "type": "mailing",
+        "label": "Mailing",
+        "id": "89101-mail-asdf-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Address",
+    "name": "mail_add2",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "43234243",
+    "order": 2,
+    "helperText": "Please enter data",
+    "accessLevel": 3,
+    "minRole": "admin",
+    "category": {
+        "type": "mailing",
+        "label": "Mailing",
+        "id": "89101-mail-asdf-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Address",
+    "name": "mail_add3",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "3252342",
+    "order": 3,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "mailing",
+        "label": "Mailing",
+        "id": "89101-mail-asdf-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "City",
+    "name": "mail_add4",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "13414134",
+    "order": 4,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "mailing",
+        "label": "Mailing",
+        "id": "89101-mail-asdf-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Country",
+    "name": "mail_add5",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "2452452",
+    "order": 5,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "mailing",
+        "label": "Mailing",
+        "id": "89101-mail-asdf-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Zip Code",
+    "name": "mail_zip_code",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "2452452",
+    "order": 5,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "mailing",
+        "label": "Mailing",
+        "id": "89101-mail-asdf-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+
+
+
+  {
+    "type": "text",
+    "label": "Employer Name",
+    "name": "employer",
+    "validation": "",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "123123",
+    "order": 1,
+    "helperText": "Please enter data",
+    "accessLevel": 3,
+    "minRole": "admin",
+    "category": {
+        "type": "employment",
+        "label": "Employment",
+        "id": "89101-conaslk-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Employer Phone",
+    "name": "emloyer_phone",
+    "validation": "[\\d+-]",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "43234243",
+    "order": 2,
+    "helperText": "Please enter data",
+    "accessLevel": 3,
+    "minRole": "admin",
+    "category": {
+        "type": "employment",
+        "label": "Employment",
+        "id": "89101-conaslk-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Employer Email",
+    "name": "emp_e_mail",
+    "validation": "\\w+@\\w+\\.\\w{2,}",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "43234243",
+    "order": 3,
+    "helperText": "Please enter data",
+    "accessLevel": 3,
+    "minRole": "admin",
+    "category": {
+        "type": "employment",
+        "label": "Employment",
+        "id": "89101-conaslk-fda111",
+        "order": 3
+    },
+    "options": []
+  },{
+    "type": "text",
+    "label": "Employer Address",
+    "name": "emp_add1",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "123123",
+    "order": 4,
+    "helperText": "Please enter data",
+    "accessLevel": 3,
+    "minRole": "admin",
+    "category": {
+       "type": "employment",
+        "label": "Employment",
+        "id": "89101-conaslk-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "PO Box / Suite",
+    "name": "emp_add2",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "43234243",
+    "order": 5,
+    "helperText": "Please enter data",
+    "accessLevel": 3,
+    "minRole": "admin",
+    "category": {
+       "type": "employment",
+        "label": "Employment",
+        "id": "89101-conaslk-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "City",
+    "name": "emp_add3",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "3252342",
+    "order": 6,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+       "type": "employment",
+        "label": "Employment",
+        "id": "89101-conaslk-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Postal code",
+    "name": "emp_add4",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "13414134",
+    "order": 7,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+       "type": "employment",
+        "label": "Employment",
+        "id": "89101-conaslk-fda111",
+        "order": 3
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Country",
+    "name": "emp_add5",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "2452452",
+    "order": 8,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+       "type": "employment",
+        "label": "Employment",
+        "id": "89101-conaslk-fda111",
+        "order": 3
+    },
+    "options": []
+  },
 
 
 
 
-
-      {
-        "type": "text",
-        "label": "Employer Name",
-        "name": "employer",
-        "validation": "",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "123123",
-        "order": 1,
-        "helperText": "Please enter data",
-        "accessLevel": 3,
-        "minRole": "admin",
-        "category": {
-            "type": "employment",
-            "label": "Employment",
-            "id": "89101-conaslk-fda111",
-            "order": 3
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "Employer Phone",
-        "name": "emloyer_phone",
-        "validation": "[\\d+-]",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "43234243",
-        "order": 2,
-        "helperText": "Please enter data",
-        "accessLevel": 3,
-        "minRole": "admin",
-        "category": {
-            "type": "employment",
-            "label": "Employment",
-            "id": "89101-conaslk-fda111",
-            "order": 3
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "Employer Email",
-        "name": "emp_e_mail",
-        "validation": "\\w+@\\w+\\.\\w{2,}",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "43234243",
-        "order": 3,
-        "helperText": "Please enter data",
-        "accessLevel": 3,
-        "minRole": "admin",
-        "category": {
-            "type": "employment",
-            "label": "Employment",
-            "id": "89101-conaslk-fda111",
-            "order": 3
-        },
-        "options": []
-      },{
-        "type": "text",
-        "label": "Employer Address",
-        "name": "emp_add1",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "123123",
-        "order": 4,
-        "helperText": "Please enter data",
-        "accessLevel": 3,
-        "minRole": "admin",
-        "category": {
-           "type": "employment",
-            "label": "Employment",
-            "id": "89101-conaslk-fda111",
-            "order": 3
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "PO Box / Suite",
-        "name": "emp_add2",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "43234243",
-        "order": 5,
-        "helperText": "Please enter data",
-        "accessLevel": 3,
-        "minRole": "admin",
-        "category": {
-           "type": "employment",
-            "label": "Employment",
-            "id": "89101-conaslk-fda111",
-            "order": 3
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "City",
-        "name": "emp_add3",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "3252342",
-        "order": 6,
-        "helperText": "Please enter data",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-           "type": "employment",
-            "label": "Employment",
-            "id": "89101-conaslk-fda111",
-            "order": 3
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "Postal code",
-        "name": "emp_add4",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "13414134",
-        "order": 7,
-        "helperText": "Please enter data",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-           "type": "employment",
-            "label": "Employment",
-            "id": "89101-conaslk-fda111",
-            "order": 3
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "Country",
-        "name": "emp_add5",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "2452452",
-        "order": 8,
-        "helperText": "Please enter data",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-           "type": "employment",
-            "label": "Employment",
-            "id": "89101-conaslk-fda111",
-            "order": 3
-        },
-        "options": []
-      },
-
-
-
-
-    {
-        "type": "text",
-        "label": "Ins. #",
-        "name": "insured_no",
-        "validation": "\\d+",
-        "value": "123456",
-        "required": true,
-        "disabled": false,
-        "id": "123123",
-        "order": 0,
-        "helperText": "Please enter data",
-        "accessLevel": 3,
-        "minRole": "admin",
-        "category": {
-            "type": "demographic",
-            "label": "Demographic",
-            "id": "89101-01adsfab-asdf-fda",
-            "order": 1
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "Ins. Type",
-        "name": "insured_type",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "43234243",
-        "order": 1,
-        "helperText": "Please enter data",
-        "accessLevel": 3,
-        "minRole": "admin",
-        "category": {
-            "type": "demographic",
-            "label": "Demographic",
-            "id": "89101-01adsfab-asdf-fda",
-            "order": 1
-        },
-        "options": []
-      },
-      {
-        "type": "select",
-        "label": "Salutation",
-        "name": "salutation",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "3252342",
-        "order": 2,
-        "helperText": "Please enter data",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-            "type": "demographic",
-            "label": "Demographic",
-            "id": "89101-01adsfab-asdf-fda",
-            "order": 1
-        },
-        "options": [
-            { "label": "Mr", "value": 1 },
-            { "label": "Ms", "value": 2 },
-            { "label": "Mrs", "value": 3 }
-        ]
-      },
-      {
-        "type": "text",
-        "label": "First",
-        "name": "f_name",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "3252342",
-        "order": 3,
-        "helperText": "Please enter data",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-            "type": "demographic",
-            "label": "Demographic",
-            "id": "89101-01adsfab-asdf-fda",
-            "order": 1
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "Middle",
-        "name": "m_name",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "13414134",
-        "order": 4,
-        "helperText": "Please enter data",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-            "type": "demographic",
-            "label": "Demographic",
-            "id": "89101-01adsfab-asdf-fda",
-            "order": 1
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "Last",
-        "name": "l_name",
-        "validation": "\\w+",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "2452452",
-        "order": 5,
-        "helperText": "Please enter data",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-            "type": "demographic",
-            "label": "Demographic",
-            "id": "89101-01adsfab-asdf-fda",
-            "order": 1
-        },
-        "options": []
-      },
-      {
-        "type": "date",
-        "label": "DOB",
-        "name": "birth_date",
-        "validation": "",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "34567345735",
-        "order": 7,
-        "helperText": "Please enter valid date",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-            "type": "demographic",
-            "label": "Demographic",
-            "id": "89101-01adsfab-asdf-fda",
-            "order": 1
-        },
-        "options": []
-      },
-      {
-        "type": "text",
-        "label": "Email",
-        "name": "e_mail",
-        "validation": "",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "34567345735",
-        "order": 6,
-        "helperText": "Please enter valid date",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-            "type": "demographic",
-            "label": "Demographic",
-            "id": "89101-01adsfab-asdf-fda",
-            "order": 1
-        },
-        "options": []
-      },
-      {
-        "type": "select",
-        "label": "Sex",
-        "name": "sex",
-        "validation": "",
-        "value": "",
-        "required": true,
-        "disabled": false,
-        "id": "34567345735",
-        "order": 9,
-        "helperText": "Please choose",
-        "accessLevel": 2,
-        "minRole": "employee",
-        "category": {
-            "type": "demographic",
-            "label": "Demographic",
-            "id": "89101-01adsfab-asdf-fda",
-            "order": 1
-        },
-         "options": [
-            { "label": "Male", "value": "m" },
-            { "label": "Female", "value": "f" },
-            { "label": "Other", "value": "t" }
-        ]
-      }
+{
+    "type": "text",
+    "label": "Ins. #",
+    "name": "insured_no",
+    "validation": "\\d+",
+    "value": "123456",
+    "required": false,
+    "disabled": true,
+    "id": "123123",
+    "order": 0,
+    "helperText": "Please enter data",
+    "accessLevel": 3,
+    "minRole": "admin",
+    "category": {
+        "type": "demographic",
+        "label": "Demographic",
+        "id": "89101-01adsfab-asdf-fda",
+        "order": 1
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Ins. Type",
+    "name": "insured_type",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "43234243",
+    "order": 1,
+    "helperText": "Please enter data",
+    "accessLevel": 3,
+    "minRole": "admin",
+    "category": {
+        "type": "demographic",
+        "label": "Demographic",
+        "id": "89101-01adsfab-asdf-fda",
+        "order": 1
+    },
+    "options": []
+  },
+  {
+    "type": "select",
+    "label": "Salutation",
+    "name": "salutation",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "3252342",
+    "order": 2,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "demographic",
+        "label": "Demographic",
+        "id": "89101-01adsfab-asdf-fda",
+        "order": 1
+    },
+    "options": [
+        { "label": "Mr", "value": 1 },
+        { "label": "Ms", "value": 2 },
+        { "label": "Mrs", "value": 3 }
     ]
+  },
+  {
+    "type": "text",
+    "label": "First",
+    "name": "f_name",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "3252342",
+    "order": 3,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "demographic",
+        "label": "Demographic",
+        "id": "89101-01adsfab-asdf-fda",
+        "order": 1
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Middle",
+    "name": "m_name",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "13414134",
+    "order": 4,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "demographic",
+        "label": "Demographic",
+        "id": "89101-01adsfab-asdf-fda",
+        "order": 1
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Last",
+    "name": "l_name",
+    "validation": "\\w+",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "2452452",
+    "order": 5,
+    "helperText": "Please enter data",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "demographic",
+        "label": "Demographic",
+        "id": "89101-01adsfab-asdf-fda",
+        "order": 1
+    },
+    "options": []
+  },
+  {
+    "type": "date",
+    "label": "DOB",
+    "name": "birth_date",
+    "validation": "",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "34567345735",
+    "order": 7,
+    "helperText": "Please enter valid date",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "demographic",
+        "label": "Demographic",
+        "id": "89101-01adsfab-asdf-fda",
+        "order": 1
+    },
+    "options": []
+  },
+  {
+    "type": "text",
+    "label": "Email",
+    "name": "e_mail",
+    "validation": "",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "34567345735",
+    "order": 6,
+    "helperText": "Please enter valid date",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "demographic",
+        "label": "Demographic",
+        "id": "89101-01adsfab-asdf-fda",
+        "order": 1
+    },
+    "options": []
+  },
+  {
+    "type": "select",
+    "label": "Sex",
+    "name": "sex",
+    "validation": "",
+    "value": "",
+    "required": true,
+    "disabled": false,
+    "id": "34567345735",
+    "order": 9,
+    "helperText": "Please choose",
+    "accessLevel": 2,
+    "minRole": "employee",
+    "category": {
+        "type": "demographic",
+        "label": "Demographic",
+        "id": "89101-01adsfab-asdf-fda",
+        "order": 1
+    },
+     "options": [
+        { "label": "Male", "value": "m" },
+        { "label": "Female", "value": "f" },
+        { "label": "Other", "value": "t" }
+    ]
+  }
+]
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { arrayOf, bool, shape, string, func } from 'prop-types';
 import useForm from 'react-hook-form';
 import reduce from 'lodash/reduce';
 import sortBy from 'lodash/sortBy';
@@ -22,91 +23,12 @@ const { Panel } = Collapse;
 
 
 export const Form = ({
-  name, fields, onReset, onSubmit, data
+  name, fields, onReset, onSubmit, data, editable
 }) => {
-  const { register, handleSubmit, errors, setValue } = useForm({
-    validateCriteriaMode: "firstErrorDetected",
-  });
+  const { register, handleSubmit, errors, setValue } = useForm();
 
   const [catConfig, setCatConfig] = useState([]);
 
-  useEffect(() => {
-    console.log('hello')
-    // getDataFromApi(params);
-  }, [])
-
-  const handleChange = (e) => {
-    console.log('ok', e.target.name)
-    const { name, value } = e.target;
-    setValue(name, value);
-  }
-
-
-  const onChange = (date, dateString) => {
-    console.log(date, dateString);
-  }
-
-
-  const renderSection = section => {
-    return section.map(field => {
-      const {
-        id, type, name, label, required, value, disabled, options
-      } = field;
-
-      if (type === 'text') {
-        return (
-          <Col span={8} key={id}>
-            <label htmlFor={name}>{label}</label>
-            <Input
-              onChange={handleChange}
-              name={name}
-              required={required}
-              disabled={disabled}
-            />
-          </Col>
-        )
-      } else if (type === 'date') {
-        return (
-          <Col span={8} key={id}>
-            <label htmlFor={name}>{label}</label>
-            <Row>
-            <Col span={24}>
-              <DatePicker onChange={onChange} name={name} required={required} />
-            </Col>
-            </Row>
-          </Col>
-        )
-      } else if (type === 'select') {
-        return (
-          <Col span={8} key={id}>
-            <label htmlFor={name}>{label}</label>
-            <Select
-              mode='single'
-              onChange={onChange}
-              name={name}
-              required={required}
-              options={options} />
-          </Col>
-        )
-      } else {
-        return null;
-      }
-    })
-  }
-
-  const renderCategory = ({ category, fields }) => {
-    console.log(category)
-    return (
-      <Panel header={category.label} key={category.id}>
-        <Row gutter={{ xs: 10, sm: 16, md: 24 }}  className='form-panel'>
-          {renderSection(fields)}
-        </Row>
-        <Row>
-        <h4>end /</h4>
-        </Row>
-      </Panel>
-    )
-  }
 
   useEffect(() => {
     fields.map(({ name, value, validation }) => {
@@ -146,8 +68,100 @@ export const Form = ({
   }, [])
 
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValue(name, value);
+  }
+
+
+  const onChange = (date, dateString) => {
+    console.log(date, dateString);
+  }
+
+  console.log(data, catConfig)
+
+  const renderSection = section => {
+    return section.map(field => {
+      const {
+        id, type, name, label, required, disabled, options
+      } = field;
+
+      const value = data[name];
+
+      if (value) {
+        console.log(name, value);
+      }
+
+      if (type === 'text') {
+        return (
+          <Col span={8} key={id}>
+            <label htmlFor={name}>{label}</label>
+            { editable
+              ? (<Input
+                onChange={handleChange}
+                name={name}
+                defaultValue={value}
+                required={required}
+                disabled={disabled}
+              />)
+              : (<p>{value}</p>)
+            }
+          </Col>
+        )
+      } else if (type === 'date') {
+        return (
+          <Col span={8} key={id}>
+            <label htmlFor={name}>{label}</label>
+            <Row>
+            <Col span={24}>
+              { editable
+                ? (<DatePicker
+                  onChange={onChange}
+                  name={name}
+                  defaultValue={value}
+                  required={required} />)
+                : (<p>{value}</p>)
+              }
+            </Col>
+            </Row>
+          </Col>
+        )
+      } else if (type === 'select') {
+        return (
+          <Col span={8} key={id}>
+            <label htmlFor={name}>{label}</label>
+            { editable
+              ? (<Select
+                mode='single'
+                onChange={onChange}
+                name={name}
+                defaultValue={value}
+                required={required}
+                options={options} />)
+              : (<p>{value}</p>)
+            }
+          </Col>
+        )
+      } else {
+        return null;
+      }
+    })
+  }
+
+  const renderCategory = ({ category, fields }) => {
+    return (
+      <Panel header={category.label} key={category.id}>
+        <Row gutter={{ xs: 10, sm: 16, md: 24 }}  className='form-panel'>
+          {renderSection(fields)}
+        </Row>
+        <Row>
+        <h4>end /</h4>
+        </Row>
+      </Panel>
+    )
+  }
+
   const defaultKey = catConfig.length ? catConfig[0].category.id : 0;
-  console.log(defaultKey)
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='full-width'>
@@ -156,11 +170,20 @@ export const Form = ({
           {catConfig.map(renderCategory)}
         </Collapse>)
       }
-      <Button className='m50' type='submit' onSubmit={onSubmit}>Submit</Button>
+      <Button className='m50' htmlType='submit'>Submit</Button>
 
     </form>
   );
 }
+
+Form.propTypes = {
+  data: shape({
+    id: string.isRequired,
+  }).isRequired,
+  editable: bool.isRequired,
+  fields: arrayOf(shape({})).isRequired,
+  onSubmit: func.isRequired,
+};
 
 export default Form;
 
