@@ -19,11 +19,11 @@ function App() {
   return (
     <div className="App">
       <DefaultLayout
-        sidebarContent={
-          <Sidebar onClick={handleSelect} />
-        }
+        sidebarContent={ <Sidebar onClick={handleSelect} /> }
         subHeader="subHeader" >
+
         <Customer data={selected} onSubmit={handleSubmitSelected}/>
+
       </DefaultLayout>
     </div>
   );

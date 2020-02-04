@@ -1,3 +1,36 @@
+# Web interface for Insure
+
+## Project Structure
+
+The entry point of the application (presently) is `src/App.js`, it renders the DefaultLayout with some components inside of it.
+
+All your UI-application code lives in folder `src`
+
+
+```
+* indicates future feature
+
+-- src/
+  -- api/             --> all api requests
+  -- assets/          --> all static assets ( image, fonts ... etc )
+  -- components/      --> all shared components (buttons, form inputs, etc)
+  -- pages/           --> all pages hooked up with Routes* and page specific components
+  -- redux/           --> all redux state management code
+    -- *Actions/      --> all redux actions to dispatch
+    -- *Saga/         --> all redux-saga code
+    -- *Selectors/    --> all redux selectors (actual state tree and selectors)
+  -- theme/           --> all global styles, layout, config
+```
+
+## Developing
+
+See below
+
+
+
+
+### -------------------- Boilerplate below --------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
