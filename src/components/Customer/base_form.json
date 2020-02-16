@@ -31,7 +31,6 @@
     "id": "43234243",
     "order": 2,
     "helperText": "Please enter data",
-    "accessLevel": 3,
     "minRole": "admin",
     "category": {
         "type": "contacts",
@@ -52,7 +51,6 @@
     "id": "3252342",
     "order": 3,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "contacts",
@@ -73,7 +71,6 @@
     "id": "13414134",
     "order": 4,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "contacts",
@@ -94,7 +91,6 @@
     "id": "2452452",
     "order": 5,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "contacts",
@@ -115,7 +111,6 @@
     "id": "2452452",
     "order": 5,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "contacts",
@@ -139,7 +134,6 @@
     "id": "123123",
     "order": 1,
     "helperText": "Please enter data",
-    "accessLevel": 3,
     "minRole": "admin",
     "category": {
         "type": "mailing",
@@ -160,7 +154,6 @@
     "id": "43234243",
     "order": 2,
     "helperText": "Please enter data",
-    "accessLevel": 3,
     "minRole": "admin",
     "category": {
         "type": "mailing",
@@ -181,7 +174,6 @@
     "id": "3252342",
     "order": 3,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "mailing",
@@ -202,7 +194,6 @@
     "id": "13414134",
     "order": 4,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "mailing",
@@ -223,7 +214,6 @@
     "id": "2452452",
     "order": 5,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "mailing",
@@ -244,7 +234,6 @@
     "id": "2452452",
     "order": 5,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "mailing",
@@ -268,7 +257,6 @@
     "id": "123123",
     "order": 1,
     "helperText": "Please enter data",
-    "accessLevel": 3,
     "minRole": "admin",
     "category": {
         "type": "employment",
@@ -289,7 +277,6 @@
     "id": "43234243",
     "order": 2,
     "helperText": "Please enter data",
-    "accessLevel": 3,
     "minRole": "admin",
     "category": {
         "type": "employment",
@@ -310,7 +297,6 @@
     "id": "43234243",
     "order": 3,
     "helperText": "Please enter data",
-    "accessLevel": 3,
     "minRole": "admin",
     "category": {
         "type": "employment",
@@ -330,7 +316,6 @@
     "id": "123123",
     "order": 4,
     "helperText": "Please enter data",
-    "accessLevel": 3,
     "minRole": "admin",
     "category": {
        "type": "employment",
@@ -351,7 +336,6 @@
     "id": "43234243",
     "order": 5,
     "helperText": "Please enter data",
-    "accessLevel": 3,
     "minRole": "admin",
     "category": {
        "type": "employment",
@@ -369,10 +353,9 @@
     "value": "",
     "required": true,
     "disabled": false,
-    "id": "3252342",
+    "id": "a-b-3252342",
     "order": 6,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
        "type": "employment",
@@ -393,7 +376,6 @@
     "id": "13414134",
     "order": 7,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
        "type": "employment",
@@ -414,7 +396,6 @@
     "id": "2452452",
     "order": 8,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
        "type": "employment",
@@ -439,7 +420,6 @@
     "id": "123123",
     "order": 0,
     "helperText": "Please enter data",
-    "accessLevel": 3,
     "minRole": "admin",
     "category": {
         "type": "demographic",
@@ -460,7 +440,6 @@
     "id": "43234243",
     "order": 1,
     "helperText": "Please enter data",
-    "accessLevel": 3,
     "minRole": "admin",
     "category": {
         "type": "demographic",
@@ -478,10 +457,9 @@
     "value": "",
     "required": true,
     "disabled": false,
-    "id": "3252342",
+    "id": "b-3252342",
     "order": 2,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "demographic",
@@ -503,10 +481,9 @@
     "value": "",
     "required": true,
     "disabled": false,
-    "id": "3252342",
+    "id": "c-3252342",
     "order": 3,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "demographic",
@@ -527,7 +504,6 @@
     "id": "13414134",
     "order": 4,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "demographic",
@@ -548,7 +524,6 @@
     "id": "2452452",
     "order": 5,
     "helperText": "Please enter data",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "demographic",
@@ -569,7 +544,6 @@
     "id": "34567345735",
     "order": 7,
     "helperText": "Please enter valid date",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "demographic",
@@ -590,7 +564,6 @@
     "id": "34567345735",
     "order": 6,
     "helperText": "Please enter valid date",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "demographic",
@@ -611,7 +584,6 @@
     "id": "34567345735",
     "order": 9,
     "helperText": "Please choose",
-    "accessLevel": 2,
     "minRole": "employee",
     "category": {
         "type": "demographic",

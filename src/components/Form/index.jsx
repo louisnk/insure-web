@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { arrayOf, bool, shape, string, func } from 'prop-types';
+import uuid from 'uuid/v4'
 import useForm from 'react-hook-form';
+import cloneDeep from 'lodash/cloneDeep';
+import throttle from 'lodash/throttle';
 import reduce from 'lodash/reduce';
 import sortBy from 'lodash/sortBy';
 import {
@@ -11,11 +14,12 @@ import {
   Button,
   DatePicker,
   Input,
+  Typography
 } from 'antd';
 
 import Select from './select';
-import Typography from '../Typography';
 const { Panel } = Collapse;
+const { Title } = Typography;
 
 // const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
 
@@ -23,9 +27,17 @@ const { Panel } = Collapse;
 
 
 export const Form = ({
-  name, fields, onReset, onSubmit, data, editable
+  name,
+  fields,
+  onReset,
+  onSubmit,
+  data,
+  editable,
+  collapsible,
+  addRemoveEnabled
 }) => {
   const { register, handleSubmit, errors, setValue } = useForm();
+  const dRegex = new RegExp(/\d$/);
 
   const [catConfig, setCatConfig] = useState([]);
 
@@ -40,7 +52,7 @@ export const Form = ({
         validate: val => validRegex.test(val)
       })
     })
-  }, [register]);
+  }, [register, fields]);
 
 
   useEffect(() => {
@@ -65,7 +77,7 @@ export const Form = ({
 
 
     setCatConfig(categories);
-  }, [])
+  }, [fields])
 
 
   const handleChange = (e) => {
@@ -76,6 +88,36 @@ export const Form = ({
 
   const onChange = (date, dateString) => {
     console.log(date, dateString);
+  }
+
+  const onAddCategory = (e, id) => {
+    e && e.stopPropagation();
+    let category = cloneDeep(
+      catConfig.filter(({ category }) => category.id === id)
+    );
+    const newUuid = uuid();
+    const currentLabel = `${category[0].category.label}`;
+    const categoryNumber = parseInt(
+      (currentLabel[currentLabel.search(dRegex, 0)] || 0),
+      10
+    );
+
+    category[0].category.id = newUuid;
+    category[0].category.label = categoryNumber
+      ? currentLabel.replace(dRegex, categoryNumber + 1)
+      : `${currentLabel} 1`;
+
+    console.log('adding', category)
+    setCatConfig([...catConfig, ...category])
+  }
+  const onRemoveCategory = (e, id) => {
+    e && e.stopPropagation();
+    console.log('removing6removing', id)
+    const category = cloneDeep(
+      catConfig.filter(({ category }) => category.id !== id)
+    );
+
+    setCatConfig(category);
   }
 
   console.log(data, catConfig)
@@ -148,9 +190,38 @@ export const Form = ({
     })
   }
 
+  const categoryHeader = ({ label, id }) => (
+    <Row>
+      <Col span={22} key={id}>
+        <Title level={2}>{label}</Title>
+      </Col>
+      { addRemoveEnabled &&
+        (<Col span={2} key={id}>
+          <Button
+            onClick={throttle((e) => onAddCategory(e, id), 1000)}
+            type='primary'
+            shape='circle'
+            icon='plus' />
+            &nbsp;
+          <Button
+            onClick={throttle((e) => onRemoveCategory(e, id), 1000)}
+            type='danger'
+            shape='circle'
+            icon='close' />
+        </Col>)
+      }
+    </Row>
+  )
+
   const renderCategory = ({ category, fields }) => {
     return (
-      <Panel header={category.label} key={category.id}>
+      <Collapse
+        defaultActiveKey={defaultKey}
+        className='full-width'>
+      <Panel
+        header={categoryHeader(category)}
+        key={category.id}
+        disabled={!collapsible}>
         <Row gutter={{ xs: 10, sm: 16, md: 24 }}  className='form-panel'>
           {renderSection(fields)}
         </Row>
@@ -158,6 +229,7 @@ export const Form = ({
         <h4>end /</h4>
         </Row>
       </Panel>
+      </Collapse>
     )
   }
 
@@ -165,13 +237,8 @@ export const Form = ({
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='full-width'>
-      { defaultKey &&
-        (<Collapse defaultActiveKey={defaultKey} className='full-width'>
-          {catConfig.map(renderCategory)}
-        </Collapse>)
-      }
+      { defaultKey && catConfig.map(renderCategory) }
       <Button className='m50' htmlType='submit'>Submit</Button>
-
     </form>
   );
 }
@@ -180,6 +247,8 @@ Form.propTypes = {
   data: shape({
     id: string.isRequired,
   }).isRequired,
+  addRemoveEnabled: bool.isRequired,
+  collapsible: bool.isRequired,
   editable: bool.isRequired,
   fields: arrayOf(shape({})).isRequired,
   onSubmit: func.isRequired,

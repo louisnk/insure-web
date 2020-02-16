@@ -15,9 +15,9 @@ const CustomerSidebar = ({ onClick }) => {
     const { data } = await api.getCustomers();
     setRaw(data);
     console.log(data)
-    const toUse = Object.keys(data).map(id => data[id])
+    // const toUse = Object.keys(data).map(id => data[id])
 
-    setData(toUse);
+    // setData(toUse);
   }
 
   useEffect(() => {
