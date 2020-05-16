@@ -2,21 +2,26 @@
 <head>
 <style>
  body {
-   font-size: 14px;
+   font-size: 10px;
+   font-family: courier;
  }
  .header {
-   font-size: 18px;
+   font-size: 20px;
+ }
+ p.header {
+  margin-top: 0;
+  margin-bottom: 10px;
  }
  .header2 {
-   font-size: 16px;
+   font-size: 12px;
  }
  .bold {
-   font-weight: 900;
+   font-weight: 600;
  }
  .container {
    display: flex;
    flex-direction: column;
-   padding: 10px;
+   padding: 10px 0;
  }
  .row {
    display: flex;
@@ -41,6 +46,10 @@
  .center {
    text-align: center;
  }
+ .right {
+  text-align: right;
+  padding-right: 20px;
+ }
  .condensed {
    line-height: 14px;
    margin-bottom: 0;
@@ -51,19 +60,22 @@
    margin-block-end: 0;
  }
  .ml50 {
-   margin-left: 50px;
+   margin-left: 20px;
  }
  .pl20 {
   padding-left: 20px;
  }
- .pl80 {
-  padding-left: 50px;
+ .pr50 {
+  padding-right: 30%;
  }
- .mw80 {
-  max-width: 100px;
+ .mw100 {
+  max-width: 120px;
  }
  .neg20 {
   margin-left: -20px;
+ }
+ p.end {
+  align-self: flex-end;
  }
  ol {
    width: 100%;
@@ -77,9 +89,9 @@
    margin: 5px;
  }
  ol li {
-   margin-left: 40px;
+   margin-left: 20px;
    margin-top: 5px;
-   margin-bottom: 5px;
+   margin-bottom: 15px;
  }
  ul.clear {
   /*list-style-type: lower-alpha;*/
@@ -94,7 +106,7 @@
   margin-left: -15px;
  }
  ul.clear li p:not(:first-child) {
-  margin-left: 9px;
+  margin-left: 15px;
  }
  ul, ol {
    margin-top: 0;
@@ -118,11 +130,11 @@
        <p class="header">THE MOTOR VEHICLE INSURANCE (THIRD PARTY RISKS) ACT<br>CERTIFICATE OF INSURANCE</p>
      </div>
    </div>
-   <div class="row header">
-     <div class="col center">
+   <div class="row header2 pl20">
+     <div class="col ">
        <p>CERTIFICATE: <span class="bold">TX 1-20537543</span></p>
      </div>
-   <div class="col center">
+   <div class="col right">
        <p>POLICY NO.: <span class="bold">0000 MPI 268446</span></p>
    </div>
  </div>
@@ -133,22 +145,27 @@
        <div class="col bold"><p>PDA 321</p></div>
    </div>
    <div class="row">
-     <div class="col"><p>or (if not registered) Make</p></div>
-       <div class="col bold"><p>B M W 520I</p></div>
+     <div class="col"><p class="pr50 end">or (if not registered) Make</p></div>
+       <div class="col "><p>B M W 520I</p></div>
    </div>
    <div class="row">
-     <div class="col"><p>Chassis No:</p></div>
-     <div class="col bold"><p>DGFADGFADFG</p></div>
+     <div class="col"><p class="pr50 end">Chassis No:</p></div>
+     <div class="col "><p>DGFADGFADFG</p></div>
    </div>
    <div class="row">
-     <div class="col"><p>Seating Capacity:</p></div>
-     <div class="col bold"><p>4</p></div>
+     <div class="col"><p class="pr50 end">Seating Capacity:</p></div>
+     <div class="col "><p>4</p></div>
    </div>
    </li>
    <li>
      <div class="row">
      <div class="col"><p>Name of Policyholder</p></div>
-     <div class="col bold"><p>RENEE DOMINIQUE GALT</p></div>
+     <div class="col bold condensed">
+      <p>RENEE DOMINIQUE GALT</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
    </div>
    </li>
    <li>
@@ -157,7 +174,7 @@
        <p>Effective date of commencement of Insurance</p>
        <p>for the purpose of the Ordinance</p>
      </div>
-       <div class="col bold"><p>25th September 2014</p></div>
+       <div class="col"><p>25th September 2014</p></div>
      </div>
    </li>
    <li>
@@ -165,7 +182,7 @@
      <div class="col condensed">
        <p>Date of expiry of Insurance.</p>
      </div>
-       <div class="col bold"><p>24th September 2015</p></div>
+       <div class="col"><p>24th September 2015</p></div>
      </div>
    </li>
    <li>
@@ -173,13 +190,13 @@
      <div class="col condensed"><p>Persons or classes of persons entitled to drive.</p>
       <ul class="clear">
         <li>
-          <p>(a)&nbsp;&nbsp;The Policyholder</p>
+          <p>(a)&nbsp;The Policyholder</p>
           <p>The Policyholder may also drive a private motor car not belonging</p>
           <p>to or hired (under a hire purchase agreement or otherwise) to</p>
           <p>him/her or his/her employer or his/her partner.</p>
         </li>
         <li>
-          <p>(b)&nbsp;&nbsp;Any other person who is driving on the Policyholder's order or</p>
+          <p>(b)&nbsp;Any other person who is driving on the Policyholder's order or</p>
           <p>with his/her permission.</p>
         </li>
       </ul>
@@ -189,9 +206,7 @@
  <br/>
  <div class="row">
    <div class="col condensed neg20">
-     <p>Provided that the person driving holds a valid current driver's permit and is permitted in accordance with the Licensing</p>
-     <p>or other laws or regulations to drive the motor vehicle or has been permitted and is not disqualified by order of a Court</p>
-     <p>of Law or by reason of any enactment or regulation in that behalf from driving the motor vehicle.</p>
+     <p>Provided that the person driving holds a valid current driver's permit and is permitted in accordance with the Licensing or other laws or regulations to drive the motor vehicle or has been permitted and is not disqualified by order of a Court of Law or by reason of any enactment or regulation in that behalf from driving the motor vehicle.</p>
    </div>
  </div>
  </li>
@@ -220,21 +235,22 @@
    </div>
 <br/>
    <div class="row">
-     <div class="col center header2 bold">
+     <div class="col center  bold">
        <p>I/WE HEREBY CERTIFY THAT THE POLICY TO WHICH THIS CERTIFICATE RELATES IS<br>ISSUED IN ACCORDANCE WITH THE PROVISIONS OF THE ABOVE MENTIONED ACT.</p>
      </div>
    </div>
    <div class="row">
-    <br/>
-    <br/>
+
      <div class="col ml50 md">
         <div class="row">
-        <div class="col mw80">
+        <div class="col mw100">
+          <p>&nbsp;</p>
           <p>Hour of Issue:</p>
           <p>Date of Issue:</p>
           <p>Examined By: </p>
         </div>
          <div class="col">
+          <p>&nbsp;</p>
            <p>3:48 PM</p>
            <p>8th May 2020</p>
             <p>Nicole</p>
@@ -243,10 +259,9 @@
         </div>
 
      </div>
-     <div class="col sm"></div>
      <div class="col center bold lg">
       <br/>
-      <div class="condensed">
+      <div class="condensed ">
        <p>MOTOR ONE INSURANCE COMPAMY LIMITED</p>
        <p>Cor. French Street and Ariapita Avenue, Woodbrook</p>
       </div>
