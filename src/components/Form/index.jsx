@@ -90,36 +90,6 @@ export const Form = ({
     console.log(date, dateString);
   }
 
-  const onAddCategory = (e, id) => {
-    e && e.stopPropagation();
-    let category = cloneDeep(
-      catConfig.filter(({ category }) => category.id === id)
-    );
-    const newUuid = uuid();
-    const currentLabel = `${category[0].category.label}`;
-    const categoryNumber = parseInt(
-      (currentLabel[currentLabel.search(dRegex, 0)] || 0),
-      10
-    );
-
-    category[0].category.id = newUuid;
-    category[0].category.label = categoryNumber
-      ? currentLabel.replace(dRegex, categoryNumber + 1)
-      : `${currentLabel} 1`;
-
-    console.log('adding', category)
-    setCatConfig([...catConfig, ...category])
-  }
-  const onRemoveCategory = (e, id) => {
-    e && e.stopPropagation();
-    console.log('removing6removing', id)
-    const category = cloneDeep(
-      catConfig.filter(({ category }) => category.id !== id)
-    );
-
-    setCatConfig(category);
-  }
-
   console.log(data, catConfig)
 
   const renderSection = section => {
@@ -195,21 +165,6 @@ export const Form = ({
       <Col span={22} key={id}>
         <Title level={2}>{label}</Title>
       </Col>
-      { addRemoveEnabled &&
-        (<Col span={2} key={id}>
-          <Button
-            onClick={throttle((e) => onAddCategory(e, id), 1000)}
-            type='primary'
-            shape='circle'
-            icon='plus' />
-            &nbsp;
-          <Button
-            onClick={throttle((e) => onRemoveCategory(e, id), 1000)}
-            type='danger'
-            shape='circle'
-            icon='close' />
-        </Col>)
-      }
     </Row>
   )
 

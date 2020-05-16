@@ -13,11 +13,17 @@ const CustomerSidebar = ({ onClick }) => {
 
   const getCustomers = async () => {
     const { data } = await api.getCustomers();
-    setRaw(data);
-    console.log(data)
-    // const toUse = Object.keys(data).map(id => data[id])
+    if (!data || !Object.keys(data).length) {
+      console.log('no data from customers api')
 
-    // setData(toUse);
+    } else {
+      setRaw(data);
+      console.log(data)
+      const toUse = Object.keys(data).map(id => data[id])
+
+      setData(toUse);
+
+    }
   }
 
   useEffect(() => {
