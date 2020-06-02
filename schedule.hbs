@@ -1,0 +1,64 @@
+<html>
+<head>
+  <link rel="stylesheet" href="./cert.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row center bold">
+      <div class="col">
+        <p class="header">MOTOR ONE INSURANCE COMPANY LIMITED</p>
+        <p class="header">MOTOR Policy schedule</p>
+      </div>
+    </div>
+    {{#with P1 }}
+    <div class="row ">
+      <div class="col ">
+        <p><span class="bold caps">Policy number:</span>{{ POLICY_NUMBER }}</span></p>
+        <p><span class="bold caps">Policy type:</span>{{ POLICY_TYPE }}</span></p>
+        <p><span class="bold caps">Cover applicable:</span>{{ COVER_APPLICABLE }}</span></p>
+      </div>
+      <div class="col ">
+        <p><span class="bold caps">purpose of schedule:</span> {{ PURPOSE_OF_SCHEDULE }}</p>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col ">
+        <p><span class="bold caps">Insured:</span>{{ INSURED }}</span></p>
+        <div class="row">
+          <div class="col">
+            <p class="bold caps">Address:</p>
+          </div>
+          <div class="col">
+            {{#each ADDRESS}}
+              <p>{{this}}</p>
+            {{/each}}
+          </div>
+        </div>
+
+      </div>
+      <div class="col ">
+        <p></p>
+        <p><span class="bold caps">period of insurance:</span></p>
+        <p><span class="bold caps">FROM:</span>{{ PERIOD_OF_INSURANCE.FROM }}</p>
+        <p><span class="bold caps">TO:</span>{{ PERIOD_OF_INSURANCE.TO }}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <p> <span class="bold caps">occupation: </span>{{ OCCUPATION }}</p>
+        <p> <span class="bold caps">producer: </span>{{ PRODUCER }}</p>
+      </div>
+    </div>
+    {{/with}}
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
