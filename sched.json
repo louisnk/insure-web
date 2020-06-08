@@ -1,0 +1,154 @@
+{
+  "P1": {
+    "COMPANY": "MOTOR ONE INSURANCE COMPANY LIMITED",
+    "TYPE": "MOTOR POLICY SCHEDULE",
+    "POLICY NUMBER:": "MPI 0000",
+    "PURPOSE OF SCHEDULE:": "COPY/REPRINT",
+    "POLICY TYPE:": "MOTOR PRIVATE INDIVIDUAL",
+    "COVER APPLICABLE:": "FULL COMPREHENSIVE",
+    "INSURED:": "AMITAH BALKARAN",
+    "ADDRESS:": [
+      "LP#44",
+      "ECCLES TRACE",
+      "",
+      "CUREPE",
+      "TRINIDAD & TOBAGO"
+    ],
+    "COVER PERIOD:": "PERIOD OF INSURANCE:",
+    "FROM:": "17th June 2019",
+    "TO:": "16th June 2020 AT MIDNIGHT",
+    "OCCUPATION:": "MAXI DRIVER",
+    "NAME OF EMPLOYER:": "INSYNC SOFTWARE LIMITED",
+    "PRODUCER:": "DIRECT",
+    "ENDORSEMENTS:": "A,B,C,D,E,F,G,H,K",
+    "VEHICLES:": "MOTOR VEHICLE- ANY OF THE FOLLOWING",
+    "RISKS": [
+      [
+        "VEHICLE",
+        "MAKE AND MODEL",
+        "CHASSIS / ENGINE NO",
+        "BODY TYPE",
+        "CC/HP",
+        "SEATS",
+        "YEAR",
+        "SUM INSURED",
+        "PREMIUM"
+      ],
+      [
+        "HAX-7769",
+        "NISSAN E23 MAXI TAXI 13 SEATER",
+        "CJGE24A-11526 / TD27-052382",
+        "MAXI TAXI",
+        "    1800 CC",
+        "13",
+        "1991",
+        "195,000.00",
+        " 21,800.58"
+      ],
+      [
+        "PDF 4423",
+        "FORD ESCORT  (1300)",
+        "SDFSDFGDF098F987789S / 4-FDFIOU4K434HJHJD",
+        "COUPE",
+        "1200 CC",
+        "5",
+        "1990",
+        "250,000.00",
+        " 20,000.00"
+      ]
+    ],
+    "ACCESSORIES:": "FIRE EXTINGUISHER, TAPE DECK, SPOILER, CNG TANK & ACCESSORIES, MAG RIMS & TYRES, SEAT COVERS",
+    "ANTI-THEFT DEVICES:": "BURGLAR ALARM, WHEEL LOCK, CLUB LOCK",
+    "EXTENSIONS:": "NATRUAL PERILS COVER, PASSENGER LIABILITY, RIOT, STRIKE & FLOOD, THIRD PARTY LIMIT",
+    "INTERESTED PARTY:": "ANSA FINANCE & MERCHANT BANK LIMITED - 10 ST.VINCENT STREET, PORT OF SPAIN",
+    "AUTHORIZED DRIVERS:": " AMITAH BALKARAN OLIVIER HUGGINS",
+    "LIMITATIONS AS TO USE:": "As per Certificate of Insurance",
+    "EXCESS CLAUSE:": "The Company will not pay the first sum stated below, of any claim for loss or damage under Section I and Section III",
+    "APPLICABLE EXCESSES:": "AS PER ATTACHED EXCESS SCHEDULE"
+  },
+  "P2": {
+    "TITLE1": "ATTACHING TO AND FORMING PART OF:",
+    "POLICY NUMBER2:": "MPI 0000",
+    "SUMMARY": "PREMIUM SUMMARY",
+    "TOTAL": "TOTAL PREMIUM DUE",
+    "PREMIUM:": "  $41,800.58",
+    "TAX:": "   $2,508.03",
+    "TOTAL:": "  $44,308.61",
+    "GEOGRAPHIC AREA: ": "Trinidad & Tobago",
+    "LEGISLATION:": "Ch. 48-51 - Motor Vehicle Insurance (Third Party Risks) Act.",
+    "TITLE2": "INSURANCE: ",
+    "TITLE3": "Where the Insurance provided is for Individuals:",
+    "TITLE4": "(a) Comprehensive - Section III and Section IV are cancelled",
+    "TITLE5": "(b) Third Party Fire & Theft - Sections I, IV, VI, VII, VIII, IX, and XI are Cancelled.",
+    "TITLE6": "(c) Third Party - Only Section II, V, X, XII, XIII, are operative.",
+    "COVERAGE": [
+      [
+        "COVERAGE",
+        "DESCRIPTION",
+        "LIMITS OF LIABILITY"
+      ],
+      [
+        "SECTION I",
+        "Physical Damage",
+        "Sum Insured"
+      ],
+      [
+        "",
+        "Protection and Removal",
+        "$750"
+      ],
+      [
+        "",
+        "Authorized Repair Limit",
+        "$750"
+      ],
+      [
+        "SECTION II",
+        "Death or Bodily Injury to any person",
+        "(a)  $1,000,000.00 (any one accident)"
+      ],
+      [
+        "",
+        "",
+        "(b)  $2,000,000.00 (in the aggregate)"
+      ],
+      [
+        "",
+        "Damage to Property",
+        "(c)  $500,000.00 (any one accident)"
+      ],
+      [
+        "",
+        "",
+        "(d)  $1,000,000.00 (in the aggregate)"
+      ],
+      [
+        "",
+        "Medical Expenses",
+        "$750"
+      ],
+      [
+        "SECTION III",
+        "Emergency Treatment / Medical Expenses",
+        "$1,000"
+      ],
+      [
+        "SECTION IV",
+        "Vehicle Assistance Service",
+        "Sum Insured"
+      ]
+    ],
+    "DATE OF SIGNATURE OF PROPOSAL AND DECLARATION": "...............................",
+    "EXAMINED BY : ": "...............................",
+    "AUTHORISED REPRESENTATIVE: ": "...............................",
+    "DATE: ": "...................."
+  },
+  "P3": {
+    "TITLE11": "EXCESSES SCHEDULE",
+    "TITLE12": "ATTACHING TO AND FORMING PART OF:",
+    "POLICY NUMBER3:": "MPI 0000",
+    "TITLE13": "All other Terms and Conditions remain unaltered.",
+    "EXAMINED BY : ": "...............................",
+    "DATE: ": "8th June 2020"
+  }
+}
