@@ -1,34 +1,269 @@
 <html>
 <head>
-  <link rel="stylesheet" href="./cert.css" />
+  <style>
+
+    body, table, p {
+      font-size: 10px;
+      font-family: 'courier' mono;
+    }
+    .header {
+      font-size: 18px;
+      text-transform: uppercase;
+      line-height: 24px;
+      margin-block-end: 0;
+    }
+    .caps {
+      text-transform: uppercase;
+    }
+    .header2 {
+      font-size: 14px;
+    }
+    .bold {
+      font-weight: 900;
+    }
+    .container {
+      position: relative;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      height: 100vh;
+    }
+    .row {
+      position: relative;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .col {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      max-width: 100%;
+    }
+    .col.lg {
+     flex: 4;
+    }
+    .col.md {
+     flex: 2;
+    }
+    .col.sm {
+     flex: 1;
+    }
+    .center {
+      text-align: center;
+    }
+    .text-right {
+      text-align: right;
+    }
+    .condensed {
+      line-height: 18px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .condensed p {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+    .bottom {
+      /*align-self: flex-end;*/
+      position: absolute !important;
+      bottom: 0;
+      padding-bottom: 40px;
+    }
+    .ml50 {
+      margin-left: 50px;
+    }
+    .mb20 {
+      margin-bottom: 20px;
+    }
+    .pl20 {
+     padding-left: 20px;
+    }
+    .pl50 {
+     padding-left: 50px;
+    }
+    .p0 {
+      padding: inherit 0;
+    }
+    .mw80 {
+     max-width: 100px;
+    }
+    .w100 {
+      width: 100%;
+    }
+    .neg20 {
+     margin-left: -20px;
+    }
+    ol {
+      width: 100%;
+      margin-left: 20px;
+      padding: 0;
+    }
+    ol .col:first-child {
+      flex: 1.25;
+    }
+    ol p {
+      margin: 5px;
+    }
+    ol li {
+      margin-left: 40px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    ul.clear {
+     /*list-style-type: lower-alpha;*/
+     list-style-position: inside;
+     margin-left: 0px;
+     padding-left: 10px;
+    }
+    ul.clear li {
+     margin-left: 10px;
+    }
+    ul.clear li p:first-child {
+     margin-left: -15px;
+    }
+    ul.clear li p:not(:first-child) {
+     margin-left: 9px;
+    }
+    ul, ol {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    ul li {
+      list-style: none;
+    }
+    .f1 {
+      flex: 1;
+    }
+    .f2 {
+      flex: 2;
+    }
+    .f3 {
+      flex: 3;
+    }
+    .f4 {
+      flex: 4;
+    }
+    .f5 {
+      flex: 5;
+    }
+    .fend {
+      align-self: flex-end;
+    }
+    .t_vehicle {
+      width: 12.5%;
+    }
+    .t_mm {
+      width: 20%;
+    }
+    .t_chas {
+      width: 12.5%;
+    }
+    .t_cc {
+      width: 8.5%;
+    }
+    .t_body {
+      width: 10%;
+    }
+    .t_seats {
+      width: 8.5%;
+    }
+    .t_year {
+      width: 8.5%;
+    }
+    .t_sum_in {
+      width: 12.5%;
+    }
+    .t_sum_pr {
+      width: 12.5%;
+    }
+    .cov_cov {
+      width: 20%;
+    }
+    .cov_desc {
+      width: 30%;
+    }
+    .cov_lim {
+      width: 50%;
+    }
+    .table-fixed {
+      table-layout: fixed;
+    }
+    td {
+      overflow-x: wrap;
+    }
+    .bordered, tr.bordered, tr.bordered td {
+      padding: 10px 0;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+    section {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-direction: column;
+      min-height: 99vh;
+      margin-bottom: 2vh;
+      position: relative;
+    }
+    @media print {
+      section {
+        height: 99vh;
+        margin-bottom: 2vh;
+        break-before: always;
+      }
+
+      /*section:last-child {*/
+        /*height: 100vh;*/
+        /*break-before: always;*/
+        /*break-after: never;*/
+      /*}*/
+    }
+  </style>
 </head>
 <body>
+<section>
+{{#with P1 }}
   <div class="container">
-    <div class="row center bold">
+    <div class="row center bold mb20">
       <div class="col">
         <p class="header">MOTOR ONE INSURANCE COMPANY LIMITED</p>
         <p class="header">MOTOR Policy schedule</p>
       </div>
     </div>
-    {{#with P1 }}
-    <div class="row ">
-      <div class="col ">
-        <p><span class="bold caps">Policy number:</span>{{ POLICY_NUMBER }}</span></p>
-        <p><span class="bold caps">Policy type:</span>{{ POLICY_TYPE }}</span></p>
-        <p><span class="bold caps">Cover applicable:</span>{{ COVER_APPLICABLE }}</span></p>
+    <div class="row condensed mb20">
+      <div class="col">
+        <p><span class="bold caps">Policy number:</span> &nbsp; {{ POLICY_NUMBER }}</p>
+        <p><span class="bold caps">Policy type &nbsp; &nbsp; &nbsp; :</span> &nbsp; {{ POLICY_TYPE }}</p>
+        <p><span class="bold caps">Cover applicable:</span> &nbsp; {{ COVER_APPLICABLE }}</p>
       </div>
-      <div class="col ">
-        <p><span class="bold caps">purpose of schedule:</span> {{ PURPOSE_OF_SCHEDULE }}</p>
+      <div class="col">
+        <p><span class="bold caps">purpose of schedule:</span> &nbsp; {{ PURPOSE_OF_SCHEDULE }}</p>
       </div>
     </div>
-    <div class="row ">
-      <div class="col ">
-        <p><span class="bold caps">Insured:</span>{{ INSURED }}</span></p>
+    <div class="row condensed mb20">
+      <div class="col">
+        <p><span class="bold caps">Insured:</span> &nbsp; &nbsp; {{ INSURED }}</p>
         <div class="row">
-          <div class="col">
+          <div class="col f1">
             <p class="bold caps">Address:</p>
           </div>
-          <div class="col">
+          <div class="col f5">
             {{#each ADDRESS}}
               <p>{{this}}</p>
             {{/each}}
@@ -36,11 +271,11 @@
         </div>
 
       </div>
-      <div class="col ">
+      <div class="col">
         <p></p>
-        <p><span class="bold caps">period of insurance:</span></p>
-        <p><span class="bold caps">FROM:</span>{{ PERIOD_OF_INSURANCE.FROM }}</p>
-        <p><span class="bold caps">TO:</span>{{ PERIOD_OF_INSURANCE.TO }}</p>
+        <p><span class="bold caps">{{COVER_PERIOD}}</span> &nbsp; </p>
+        <p><span class="bold caps">FROM:</span> &nbsp; {{ FROM }}</p>
+        <p><span class="bold caps">TO:</span> &nbsp; {{ TO }}</p>
       </div>
     </div>
 
@@ -48,17 +283,260 @@
       <div class="col">
         <p> <span class="bold caps">occupation: </span>{{ OCCUPATION }}</p>
         <p> <span class="bold caps">producer: </span>{{ PRODUCER }}</p>
+        <p class="caps"> <span class="bold">motor vehicle: </span>any of the following</p>
+        <p> <span class="bold caps">producer: </span>{{ PRODUCER }}</p>
+
+      </div>
+      <div class="col">
+        <p><span class="bold caps">name of employer:</span> &nbsp; {{ NAME_OF_EMPLOYER }}</p>
+        <p><span class="bold caps">dendorsements:</span> &nbsp; {{ ENDORSEMENTS }}</p>
       </div>
     </div>
+    <row class="mb20">
+      <div class="col">
+        <p class="bold caps">Risk 1</p>
+      </div>
+      <table class="table-fixed">
+        <thead>
+          <tr class="bordered">
+            <td class="t_vehicle">
+              <p class="bold caps">{{ RISKS.[0].[0] }}</p>
+            </td>
+            <td class="t_mm">
+              <p class="bold caps">{{ RISKS.[0].[1] }}</p>
+            </td>
+            <td class="t_chas">
+              <p class="bold caps">{{ RISKS.[0].[2] }}</p>
+            </td>
+            <td class="t_body">
+              <p class="bold caps">{{ RISKS.[0].[3] }}</p>
+            </td>
+            <td class="t_cc">
+              <p class="bold caps">{{ RISKS.[0].[4] }}</p>
+            </td>
+            <td class="t_seats">
+              <p class="bold caps">{{ RISKS.[0].[5] }}</p>
+            </td>
+            <td class="t_year">
+              <p class="bold caps">{{ RISKS.[0].[6] }}</p>
+            </td>
+            <td class="t_sum_in">
+              <p class="bold caps">{{ RISKS.[0].[7] }}</p>
+            </td>
+            <td class="t_sum_pr">
+              <p class="bold caps">{{ RISKS.[0].[8] }}</p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each RISKS as |riskrow| }}
+        {{#if @index}}
+          <tr>
+            {{#each riskrow as |risk| }}
+              <td>
+                  <p class="caps">{{risk}}</p>
+              </td>
+            {{/each}}
+          </tr>
+        {{/if}}
+        {{/each}}
+        </tbody>
+      </table>
+
+    </row>
+
+    <div class="row">
+      <div class="col">
+        <p><span class="bold caps">Accessories:</span> &nbsp; {{ ACCESSORIES }}</p>
+        <p><span class="bold caps">ANTI-THEFT DEVICES:</span> &nbsp; {{ ANTI_THEFT_DEVICES }}</p>
+        <p><span class="bold caps">EXTENSIONS:</span> &nbsp; {{ EXTENSIONS }}</p>
+        <p><span class="bold caps">INTERESTED PARTY:</span> &nbsp; {{ INTERESTED_PARTY }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p><span class="bold caps">AUTHORIZED DRIVERS:</span> &nbsp; {{ AUTHORIZED_DRIVERS }}</p>
+      </div>
+      <div class="col">
+        <p><span class="bold caps">LIMITATIONS AS TO USE:</span> &nbsp; {{ LIMITATIONS_AS_TO_USE }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p><span class="bold caps">EXCESS CLAUSE:</p>
+        <p>{{ EXCESS_CLAUSE }}</p>
+        <p><span class="bold caps">APPLICABLE EXCESSES:</span> &nbsp; {{ APPLICABLE_EXCESSES }}</p>
+      </div>
+    </div>
+    <div class="bottom w100">
+      <p class="text-right fend">Continued...</p>
+    </div>
+  </div>
+</section>
+{{/with}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>
+  <div class="container">
+      <div class="row center bold">
+        <div class="col">
+          <p class="header">{{P2.TITLE1}}</p>
+        </div>
+      </div>
+       <div class="row mb20">
+        <div class="col">
+          <p><span class="bold caps">Policy no.:</span> &nbsp; {{ P2.POLICY_NUMBER2 }}</p>
+          <p><span class="bold caps">Insured name:</span> &nbsp; {{ P1.INSURED }}</p>
+        </div>
+      </div>
+    {{#with P2}}
+
+      <div class="row">
+        <div class="col">
+          <p><span class="bold caps">{{ SUMMARY }}:</span></p>
+        </div>
+      </div>
+      <div class="row condensed bordered ">
+        <div class="col center">
+          <p class="caps bold center">TOTAL PREMIUM DUE</p>
+        </div>
+      </div>
+      <div class="row condensed bordered center mb20">
+        <div class="col f1"></div>
+        <div class="col f2"><p> <span class="bold caps">PREMIUM: </span>&nbsp; {{ PREMIUM }}</p></div>
+        <div class="col f2"><p> <span class="bold caps">TAX: </span>&nbsp; {{ TAX }}</p></div>
+        <div class="col f2"><p> <span class="bold caps">TOTAL: </span>&nbsp; {{ TOTAL }}</p></div>
+        <div class="col f1"></div>
+      </div>
+
+      <div class="row mb20">
+        <div class="col sm">
+          <p class="bold caps">GEOGRAPHIC AREA:</p>
+          <p class="bold caps">LEGISLATION:</p>
+        </div>
+        <div class="col lg">
+          <p class="">{{ GEOGRAPHIC_AREA }}</p>
+          <p class="">{{ LEGISLATION }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p class="bold caps">{{ TITLE2 }}</p>
+        </div>
+      </div>
+      <div class="row condensed">
+        <p class="">{{ TITLE3 }}</p>
+      </div>
+      <div class="row condensed">
+        <div class="col pl50">
+          <p class="">{{ TITLE4 }}</p>
+          <p class="">{{ TITLE5 }}</p>
+          <p class="">{{ TITLE6 }}</p>
+        </div>
+      </div>
+
+      <table class="table-fixed">
+        <thead>
+          <tr class="bordered condensed">
+            <td class="cov_cov">
+              <p class="bold caps">{{ COVERAGE.[0].[0] }}</p>
+            </td>
+            <td class="cov_desc">
+              <p class="bold caps">{{ COVERAGE.[0].[1] }}</p>
+            </td>
+            <td class="cov_lim">
+              <p class="bold caps">{{ COVERAGE.[0].[2] }}</p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each COVERAGE as |cov| }}
+        {{#if @index}}
+          <tr>
+            {{#each cov as |risk| }}
+              <td>
+                  <p class="{{#unless @index }}caps{{/unless}}">{{risk}}</p>
+              </td>
+            {{/each}}
+          </tr>
+        {{/if}}
+        {{/each}}
+        </tbody>
+      </table>
+
+
+      <div class="row bottom">
+        <div class="col f2">
+          <p class="caps bold">DATE OF SIGNATURE OF PROPOSAL AND DECLARATION:</p>
+          <p class="caps bold">EXAMINED BY:</p>
+          <p class="caps bold">AUTHORISED REPRESENTATIVE:</p>
+        </div>
+        <div class="col f2">
+           <p>..............................................................</p>
+           <p>..............................................................</p>
+           <p>..............................................................</p>
+        </div>
+        <div class="col f1">
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>DATE: &nbsp; ................</p>
+        </div>
+      </div>
+
     {{/with}}
   </div>
+</section>
+
+<section>
+  <div class="container">
+  {{#with P3}}
+    <div class="row center ">
+      <div class="col condensed">
+        <p class="header bold">{{TITLE11}}</p>
+        <p class="header">
+          <span class="bold"> {{TITLE12}} </span>
+          {{POLICY_NUMBER3}}
+        </p>
+      </div>
+    </div>
+
+    <div class="bottom w100">
+
+      <div class="row">
+        <p class="header2">{{TITLE13}}</p>
+      </div>
+      <div class="row pl20">
+        <div class="col">
+          <p class="caps bold header2">signature:</p>
+        </div>
+        <div class="col">
+          <div class="row ">
+            <div class="col md bold caps">
+              <p class="header2">EXAMINED BY:</p>
+              <p class="header2">DATE:</p>
+            </div>
+            <div class="col lg">
+              <p class="header2">{{EXAMINED_BY}}</p>
+              <p class="header2">{{DATE}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/with}}
+  </div>
+</section>
 </body>
 </html>
-
-
-
-
-
-
-
-
