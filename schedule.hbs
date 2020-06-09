@@ -242,7 +242,7 @@
   <div class="container">
     <div class="row center bold mb20">
       <div class="col">
-        <p class="header">MOTOR ONE INSURANCE COMPANY LIMITED</p>
+        <p class="header">{{ COMPANY }}</p>                        /* JFH*/
         <p class="header">MOTOR Policy schedule</p>
       </div>
     </div>
@@ -284,7 +284,6 @@
         <p> <span class="bold caps">occupation: </span>{{ OCCUPATION }}</p>
         <p> <span class="bold caps">producer: </span>{{ PRODUCER }}</p>
         <p class="caps"> <span class="bold">motor vehicle: </span>any of the following</p>
-        <p> <span class="bold caps">producer: </span>{{ PRODUCER }}</p>
 
       </div>
       <div class="col">
@@ -363,8 +362,7 @@
     </div>
     <div class="row">
       <div class="col">
-        <p><span class="bold caps">EXCESS CLAUSE:</p>
-        <p>{{ EXCESS_CLAUSE }}</p>
+        <p><span class="bold caps">EXCESS CLAUSE:</p>&nbsp; <p>{{ EXCESS_CLAUSE }}</p>     /* JFH */
         <p><span class="bold caps">APPLICABLE EXCESSES:</span> &nbsp; {{ APPLICABLE_EXCESSES }}</p>
       </div>
     </div>
